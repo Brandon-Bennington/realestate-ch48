@@ -7,25 +7,38 @@ html{
 }
 
 body{
-    font-family: "Roboto", san-serif;
+    font-family: "Cambria", sans-serif;
 }
 p{
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1.5;
 }
 h1{
-    font-size: 3rem;
+    font-size: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
 }
 h2{
-    font-size: 2.5rem;
-    text-align: center;
+    font-size: 4rem;
+    text-align: left;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding-left: 2rem; 
 }
 h3{
+    text-align: left; 
     font-size: 2.2rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+h4{
+    font-size: 3rem;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+
+
 }
 a{ 
     color: rgb(255, 255, 255);
@@ -38,18 +51,27 @@ img{
 }
 /*utilities*/
 .container{
-    width: 80%;
-    margin-left: auto; 
-    margin-right: auto;
+    margin-left: 3rem;
+    width: 90%;
+    max-width: 1200px;
+    margin:0 auto; 
 }
 .flex-c{
     display: flex;
+    justify-content: space-around;
+
 }
 .bar{
     display: flex;
     justify-content: space-around;
     height: 10rem;
     align-items: center; /* Add a value for align-items */
+}
+/*nav menu*/
+.bar a{
+    color: white;
+    font-size: 3rem;
+    text-align: right;
 }
 
 .bt{
@@ -76,13 +98,113 @@ img{
     text-align: justify; 
 }
 
-.houses-item{
-    margin-right: 1 rem;    
+.houses-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.houses-item a{
-    color: black;
+.house-item{
+    width: calc(33.33% - 1rem);
+    margin-bottom: rem; 
+    box-sizing: border-box;   
+    border: 1px solid #ddd;
+    border-radius: 10px; 
+    overflow: hidden;
+    background-color:  rgb(233, 233, 233);
 }
+
+.house-item .image-container{
+    width: 100%;
+}
+
+.house-item img {
+    width: 100%;
+}
+
+.house-item div{
+    padding: 1 rem; 
+}
+
+.house-item h3{ 
+    padding-left: 1rem; 
+    margin-left: 1rem;
+    font-size: x-large;
+}
+
+.house-item p{ 
+    margin-left: 1rem;
+    padding-left: 1rem;
+    margin-right: 1rem;
+    padding-right: 1rem;
+}
+
+.house-item .icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;    
+    margin-top: 1rem; 
+}
+
+.house-item .icon-container li{
+    display: flex;
+    align-items: center; 
+}
+
+.house-item .flex-c {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1 rem;  
+
+}
+
+.house-item .flex-c li {
+    display: flex;
+    align-items: center;
+}
+
+.house-item .icon-container li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+}
+
+.house-item .flex-c li img {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    margin-right: 0.5rem;
+}
+
+/* Style the price in green */
+.house-item p:last-of-type { /* Select the last <p> (price) */
+    color: rgb(15, 159, 15);
+    font-weight: 550;
+}
+/*See details" button */
+.house-item a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border: 2px solid orange; /* Add orange border */
+    color: white; /* Change text color to black */
+    background-color: orange; /* Add orange background color */
+    text-decoration:solid;
+    border-radius: 5px; /* Add rounded corners */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .houses-container {
+        justify-content: center;
+    }
+    .house-item {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+/*Home Page End*/
 
 .site-contact{
     background-color: rgb(193, 134, 6);
@@ -96,37 +218,39 @@ img{
 
 .form-container {
     background-color: #dedede;
-    padding: 20px; /* Add padding for better spacing */
-    border-radius: 5px;  /* Add rounded corners for a nicer look */
-    margin-top: 2rem;
+    padding: 1rem; /* Add padding for better spacing */
+    border-radius: 1rem; 
+    margin-top: 1rem;
 }
 
 .form-container fieldset{
     font-size: 1.6rem; 
+    margin: 1rem; 
+    border: 1px solid gray;
+    border-radius: 1rem; 
 }
 
 .form-control {
-    margin-bottom: 15px; /* Add spacing between form controls */
     padding-top:1 rem;
 }
 
 .form-control label {
     display: inline-block;
     padding: 10px;
+    width: 150px;
 
 }
 
 .form-control input, 
+.form-control select,
 .form-control textarea{
-    width: 90%; /* Make input fields take up full width*/
-    padding: 10px; 
-    border: 1px solid #ccc;
-    border-radius: 5px; 
-
+    width: 60%; /* Make input fields take up full width*/
+    padding: 3px; 
+    border: 1px solid #000000;
 }
-
-
 
 legend {
     margin-bottom: 10px; /* Space between legend and fieldset content */
+    font-size: 1.2rem;
+    font-weight: 300; 
 }
