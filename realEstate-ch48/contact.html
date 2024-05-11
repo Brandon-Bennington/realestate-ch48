@@ -11,20 +11,24 @@
         <div class="bar">
             <h1>Real Estate</h1>
             <nav>
-                <a class="test" href="about.html">About</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
     <main class="container">
+        <div class="contact">
         <h2>Contact </h2>
-
+        </h2>
         <p class="bt">Fill the next information</p>
         <p class="lt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ullam, a incidunt vel aliquid deserunt error ea architecto reprehenderit ipsa. Recusandae, temporibus incidunt ipsum tempora accusamus quis nostrum quidem cupiditate!</p>
-
+        </div>
+    </main>
         <div class="form-container">
-            <form> <fieldset>
+            <form> 
+                <fieldset>
                     <legend>Personal information</legend> 
                     <div class="form-control">
                         <label for="name">Name:</label>
@@ -42,21 +46,20 @@
                         <label for="message">Message:</label>
                         <textarea id="message"></textarea>
                     </div>
-                    <button type="submit">Submit</button> 
-                </fieldset>
+                    </fieldset>
                 <fieldset>
                     <legend>Product information</legend>
-                    <div>
-                        <label>Type</label>
-                        <select>
+                    <div class="product-type-control"> 
+                        <label for="type">Type</label>
+                        <select id="type">
                             <option value="option1">Option 1</option>
                             <option value="option2">Option 2</option>
                             <option value="option3">Option 3</option>
                         </select>
                     </div>
                     <div class="form-control">
-                        <label>Number:</label>
-                        <input type="number">
+                        <label for="number">Number:</label>
+                        <input type="number" id="number">
                     </div>
                 </fieldset>
                 <fieldset>
@@ -76,10 +79,22 @@
                         <label>Hour:</label>
                         <input type="number">   
                     </fieldset>
+                    <button type="submit">Submit</button> 
                 </div>
             </form>
         </div>
     </main>
 
     </body>
+<footer class="site-footer">
+    <div class="footer-container">
+        <p>Powered by Zillow</p>
+        <p>Copyright &copy; 2024 | Privacy Policy</p>
+        <div class="social-icons">
+            <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="img/linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="#"><img src="img/youtube-icon.png" alt="Youtube"></a>
+        </div>
+    </div>
+</footer>
 </html>

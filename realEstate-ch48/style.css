@@ -205,6 +205,22 @@ img{
     }
 }
 /*Home Page End*/
+.contact {
+    display: flex; /* Keep this for flexibility */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally within the flex container */
+    text-align: center; /* Center text within each element */
+    margin: 2rem auto; /* Add margin for spacing */
+}
+
+.contact h2 {
+    margin-bottom: 0; /* Remove default bottom margin from h2 */
+}
+
+.contact .bt,
+.contact .lt { /* Target the paragraph elements */
+    margin-top: 0.5rem; /* Add some top margin for spacing */
+}
 
 .site-contact{
     background-color: rgb(193, 134, 6);
@@ -221,23 +237,27 @@ img{
     padding: 1rem; /* Add padding for better spacing */
     border-radius: 1rem; 
     margin-top: 1rem;
+    max-width: 800px; /* Limit form container width */
+    margin: 2rem auto; /* Center the container on the page */
 }
-
 .form-container fieldset{
-    font-size: 1.6rem; 
+    font-size: 2rem; 
     margin: 1rem; 
     border: 1px solid gray;
     border-radius: 1rem; 
 }
 
 .form-control {
-    padding-top:1 rem;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align label and input vertically */
+    margin-bottom: 1rem; /* Add space between form controls */
 }
 
 .form-control label {
     display: inline-block;
     padding: 10px;
-    width: 150px;
+    width: 120px; /* Adjust label width as needed */
+
 
 }
 
@@ -245,12 +265,74 @@ img{
 .form-control select,
 .form-control textarea{
     width: 60%; /* Make input fields take up full width*/
-    padding: 3px; 
-    border: 1px solid #000000;
+    padding: 0.5rem; /* Adjust padding as needed */
+    border-radius: 0.4rem; /* Add rounded corners */
+}
+
+.form-control textarea {
+    resize: vertical; /* Allow resizing only vertically */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 legend {
     margin-bottom: 10px; /* Space between legend and fieldset content */
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 300; 
+}
+
+fieldset > div > label { /* This targets the "Type" label in Product Information */
+    width: 120px; /* Match the width of other labels */
+    margin-right: 1rem; /* Add some space to the right */
+}
+.product-type-control { /* New class to style the Type section */
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; 
+}
+
+.product-type-control label {
+    width: 120px;
+    margin-left: 1rem;
+}
+
+.product-type-control select {
+    width: auto;  /* Allow flexbox to control the width */
+    min-width: 480px;
+    padding: 0.5rem;
+    border: 1px solid #000000; 
+    border-radius: 0.4rem; 
+    margin-left: 10px;
+}
+
+/*Footer*/
+.site-footer {
+    background-color: #f2f2f2;
+    padding: 2rem 0;  
+    height: 200px;    
+    margin-top: 5rem; /* Add space above the footer */
+}
+
+.footer-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space elements evenly */
+    align-items: center; /* Vertically align items */
+}
+
+.social-icons {
+    display: flex; /* Arrange icons horizontally */
+    gap: 1rem;   /* Add space between icons */
+}
+
+.social-icons img {
+    width: 36px; /* Adjust icon size as needed */
+    height: 36px;
 }
