@@ -336,3 +336,127 @@ fieldset > div > label { /* This targets the "Type" label in Product Information
     width: 36px; /* Adjust icon size as needed */
     height: 36px;
 }
+
+/* about.html Specific Styles */
+
+
+.about-content {
+    align-items: center; /* Center horizontally */
+    gap: 5rem; /* Increased spacing between sections */
+}
+
+.company-intro, .mission-values, .team-highlights { /* Apply width and margin to each section */
+    width: 90%; /* Make sections take up most of the container */
+    max-width: 800px; /* Limit maximum width for readability */
+    margin: 0 auto;  /* Center sections within the 
+    container */
+    text-align: center;
+    background-color: #f5f5f5; 
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;        /* Use flexbox within team-member */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;   /* Center items horizontally */
+}
+
+
+.company-intro img {
+    width: 100%; /* Make image responsive */
+    max-width: 500px; /* Limit max width */
+    border-radius: 10px; /* Add rounded corners */
+    margin-top: 5rem;
+    margin-left: 3rem;
+}
+
+.mission-values ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 1rem;
+    font-size: 3cap;
+}
+
+.mission-values li {
+    margin-bottom: 0.5rem; /* Add spacing between list items */
+}
+
+.mission-values li::before { /* Add custom list item marker */
+    content: "\2022"; /* Bullet point character */
+    color: orange; /* Match your brand color */
+    margin-right: 0.5rem;
+}
+
+
+
+.team-highlights {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;   /* Center items horizontally */
+    gap: 2rem; /* Add some space between team members */
+}
+
+.team-member {
+    text-align: center;
+    background-color: #f5f5f5; 
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;        /* Use flexbox within team-member */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;   /* Center items horizontally */
+}
+
+.team-member img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; 
+    margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    }
+}
+
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 4rem; /* Add top padding */
+}
+
+.featured-post,
+.recent-posts {
+    width: 90%; /* Make sections take up most of the container */
+    max-width: 800px; /* Limit maximum width for readability */
+    margin: 0 auto; /* Center sections within the container */
+}
+
+.featured-post img {
+    width: 100%; 
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.recent-posts article {
+    display: flex; 
+    align-items: center;
+    gap: 1rem; 
+    margin-bottom: 2rem; /* Add space between articles */
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 10px; 
+}
+
+.recent-posts img {
+    width: 150px; /* Adjust image size as needed */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px; 
+}
+
+.recent-posts h3 {
+    margin-top: 0; /* Remove extra margin above h3 */
+}
